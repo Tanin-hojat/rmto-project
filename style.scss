@@ -1,0 +1,441 @@
+.custom-table-box {
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+
+  h5 {
+    background-color: #F39700;
+    color: white;
+    margin: 0;
+    padding: 12px 15px;
+    font-weight: 700;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    user-select: none;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ccc;
+
+    li {
+      flex: 1 0 100%;
+      background-color: #E8E8E8;
+      margin: 0;
+      padding: 10px 15px;
+      border-right: 1px solid #555;
+      border-bottom: 1px solid #555;
+      box-sizing: border-box;
+      font-size: 14px;
+
+      &:nth-child(5n) {
+        border-right: none;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+          color: #F39700;
+        }
+      }
+    }
+  }
+}
+
+
+.search-bar-wrapper {
+  .custom-search-input {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    height: 40px;
+    margin-left: -1px;
+  }
+
+  .icon-btn {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-left: -1px;
+    background-color: #EEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: 18px;
+    }
+
+    // فقط آیکون‌هایی غیر از bi-search رنگ بگیرند
+    i:not(.bi-search) {
+      color: #3151A1;
+      transition: color 0.3s;
+    }
+
+    &:hover i:not(.bi-search) {
+      color: #F39700;
+    }
+  }
+}
+.image-text-box {
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: visible;
+
+  .text-wrapper {
+    flex: 1;
+
+    .sis-title {
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 0.5rem;
+    }
+
+    .sis-abstract {
+      font-size: 14px;
+      line-height: 25px;
+      margin: 0;
+    }
+  }
+
+  .image-wrapper {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+
+    img.hover-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.custom-footer {
+  background-color: #03203E;
+  color: white;
+  padding: 2rem 1rem;
+
+  h5 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  hr {
+    border-color: #ffffff;
+    opacity: 0.6;
+    border-width: 2px;
+    margin: 0.5rem 0 1rem;
+  }
+
+  .internal-hr {
+    width: 200px;
+  }
+
+  .external-hr {
+    width: 390px;
+  }
+
+  .contact-hr {
+    width: 310px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .internal-links {
+    direction: rtl;
+  }
+
+  .contact-info {
+    align-items: flex-start;
+
+    .info-text {
+      p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 20px 10px !important;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-4,
+  .col-md-8 {
+    padding: 0 !important;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .custom-table-box h5 {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .custom-table-box ul li {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .search-bar-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar-wrapper input {
+    width: 100%;
+  }
+
+  .search-bar-wrapper .icon-btn {
+    width: 100%;
+  }
+
+  .image-text-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-wrapper img.hover-image:hover {
+    transform: none;
+  }
+
+  .sis-title {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .sis-abstract {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .custom-footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .custom-footer ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .custom-footer hr {
+    width: 50%;
+    margin: 0.5rem auto;
+  }
+  
+  .container-fluid {
+    padding: 20px 10px !important;
+  }
+
+  .row {
+    display: flex !important;
+    flex-direction: column-reverse !important; // برعکس شدن ترتیب ستون‌ها
+  }
+
+  .col-md-4,
+  .col-md-8 {
+    padding-right: 50px !important;
+    padding-left: 50px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .custom-table-box {
+    h5 {
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    ul {
+      li {
+        font-size: 13px;
+        padding: 8px 12px;
+      }
+    }
+  }
+    .search-bar-wrapper {
+      flex-direction: row !important;  // افقی کنار هم باشند
+      flex-wrap: nowrap !important;    // اجازه ندهد به خط بعد بروند
+      gap: 0 !important;               // حذف فاصله اضافی بین عناصر
+      overflow-x: auto;                // در صورت کمبود فضا اسکرول افقی بدهد
+
+      input {
+        flex: 1 1 auto;               // عرض ورودی قابل افزایش و کاهش باشد
+        min-width: 0;                 // برای جلوگیری از بزرگ شدن غیرمنطقی
+        border-radius: 0 !important;
+        height: 40px !important;
+        margin-left: 0 !important;
+      }
+
+      .icon-btn {
+        flex: 0 0 40px;              // ثابت بودن اندازه دکمه‌ها
+        width: 40px !important;
+        height: 40px !important;
+        margin-left: -1px !important;
+        border-radius: 0 !important;
+        background-color: #EEE !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+    }
+
+  .image-text-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-wrapper {
+    img.hover-image:hover {
+      transform: none;
+    }
+  }
+
+  .sis-title {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .sis-abstract {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .custom-footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    hr {
+      width: 50%;
+      margin: 0.5rem auto;
+    }
+  }
+  .breadcrumb-no-divider {
+  padding-right: 10px !important;  // کم کردن فاصله راست
+  padding-left: 10px !important;   // کم کردن فاصله چپ (برای پوشش کامل عرض)
+  background-color: #F2F3F5 !important;
+
+  nav {
+    padding-right: 0 !important;  // حذف padding زیاد که دسکتاپ بود
+  }
+
+.breadcrumb-no-divider {
+  padding-right: 10px !important;  // کم کردن فاصله راست
+  padding-left: 10px !important;   // کم کردن فاصله چپ (برای پوشش کامل عرض)
+  background-color: #F2F3F5 !important;
+
+  nav {
+    padding-right: 0 !important;  // حذف padding زیاد که دسکتاپ بود
+  }
+
+  .breadcrumb {
+    display: flex !important;
+    flex-wrap: wrap !important;   // اجازه شکستن خط
+    overflow-x: visible;          // غیرفعال کردن اسکرول افقی
+    white-space: normal !important; // اجازه شکستن متن به خط بعد
+    justify-content: flex-end !important; // راست چین کردن محتوا
+    gap: 8px;                    // فاصله بین آیتم‌ها
+    padding: 0;
+    margin: 0;
+
+    .breadcrumb-item {
+      color: #000;                // رنگ مشکی پیش‌فرض لینک‌ها
+      white-space: normal !important; // اجازه شکستن متن در هر آیتم
+
+      a {
+        color: #000;              // لینک‌ها مشکی باشن
+        text-decoration: none;
+
+        &:hover {
+          color: #F39700;         // هاور نارنجی
+        }
+      }
+
+      &.text-secondary {
+        color: #888 !important;   // رنگ خاکستری فلش‌ها
+      }
+
+      &:last-child {
+        color: #F39700 !important;
+        pointer-events: none;     // غیرقابل کلیک کردن
+      }
+
+      i {
+        vertical-align: middle;   // آیکون‌ها وسط چین
+      }
+    }
+   }
+  }
+ }
+   .custom-footer {
+    padding: 1.5rem 1rem !important;
+    
+    .row {
+      flex-direction: column !important;  // تمام ردیف‌ها در موبایل ستون‌ستونی شوند
+      gap: 1rem;                           // فاصله بین ستون‌ها
+      
+      // اگر لازم بود وسط چین شود:
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+    }
+    
+    .contact-info {
+      flex-direction: column !important;  // برای قسمت اطلاعات تماس که d-flex است
+      gap: 1rem !important;
+      
+      img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+    }
+
+    .internal-links,
+    .external-links,
+    .contact-info {
+      width: 100% !important; // پر کردن کل عرض در موبایل
+    }
+  }
+}

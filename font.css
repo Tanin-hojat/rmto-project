@@ -1,0 +1,25 @@
+.vazirmatn {
+  font-family: "Vazirmatn", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.vazirmatn.light {
+  font-weight: 300;
+}
+
+.vazirmatn.regular {
+  font-weight: 400;
+}
+
+.vazirmatn.medium {
+  font-weight: 500;
+}
+
+.vazirmatn.bold {
+  font-weight: 700;
+}
+
+.vazirmatn.extra-bold {
+  font-weight: 800;
+}
